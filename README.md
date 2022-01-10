@@ -1,6 +1,6 @@
 # An Improved Node.js Wrapper for YoutubeDL
 
-[youtubedl-dl](https://github.com/ytdl-org/youtube-dl) conventionally makes it very hard to get progress information on the status of a download. This module
+[youtube-dl](https://github.com/ytdl-org/youtube-dl) conventionally makes it very hard to get progress information on the status of a download. This module
 implements a new function `download` which returns a `ProgressPromise`. This promise allows you to get the
 status of the download, but also implements a `progress` method for you to be informed of the file's size and
 download progress.
@@ -23,8 +23,10 @@ We also accept an options object which only has a single option at the moment:
 const { download } = require('youtube-dl-progress-improved')
 
 const promise = download("https://www.youtube.com/watch?v=dQw4w9WgXcQ", {
+  // youtube-dl options go here:
   format: 'bestvideo[height <=? 480]+bestaudio/best[height <=? 480]',
 }, {
+  // our options go here, currently that's only:
   timeout: 60 * 1000,
 })
 
@@ -38,7 +40,7 @@ promise.then(() => {
   console.error("Error downloading", err)
 })
 
-// You can cancel a download:
+// You can also cancel a download:
 promise.cancel()
 
 // A cancelled download will reject, but `promise.cancelled` will be true
