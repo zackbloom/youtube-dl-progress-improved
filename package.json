@@ -1,0 +1,12 @@
+{
+  "name": "youtube-dl-progress-improved",
+  "author": "Zack Bloom <zackbloom@gmail.com>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "progress-promise": "^0.0.6",
+    "stream-split": "^1.1.0",
+    "youtube-dl-exec": "^2.0.2"
+  }
+}
