@@ -1,6 +1,7 @@
 {
   "name": "youtube-dl-progress-improved",
   "description": "youtube-dl wrapper which provides progress information",
+  "repository": "https://github.com/zackbloom/youtube-dl-progress-improved",
   "author": "Zack Bloom <zackbloom@gmail.com>",
   "version": "1.0.2",
   "main": "index.js",
@@ -8,6 +9,6 @@
   "dependencies": {
     "progress-promise": "^0.0.6",
     "stream-split": "^1.1.0",
-    "youtube-dl-exec": "^2.0.2"
+    "youtube-dl-exec": "^2.1.5"
   }
 }
