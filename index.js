@@ -13,7 +13,7 @@ const DEBUG = false
 // ^M^[[K[download]   0.0% of 7.09MiB at 351.11KiB/s ETA 00:20
 //
 const newSplitter = () => new Split(Buffer.from("0d", "hex"))
-const progressRE = /\[download\] +(?<percentage>[\d\.]+)% +of +(?<totalSize>[\d\.]+)(?<sizeUnit>\w{1,3}) +at +(?<rate>[\d\.]+)(?<rateUnit>[\w\/]+) +ETA +(?<timeRemaining>[\d:]+)/
+const progressRE = /\[download\] +(?<percentage>[\d\.]+)% +of +~?(?<totalSize>[\d\.]+)(?<sizeUnit>\w{1,3}) +at +(?<rate>[\d\.]+)(?<rateUnit>[\w\/]+) +ETA +(?<timeRemaining>[\d:]+)/
 
 let sizeUnits = {
   'B': 1,
